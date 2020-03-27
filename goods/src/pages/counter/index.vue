@@ -5,6 +5,8 @@
       <button @click="increment">+</button>
       <button @click="decrement">-</button>
     </p>
+
+    <a href="/pages/index/main" class="home">去往首页</a>
   </div>
 </template>
 
@@ -13,6 +15,15 @@
 import store from './store'
 
 export default {
+  created () {
+    // console.log(this.$root.$mp.query);
+    
+  },
+  mounted() {
+    console.log(this.$root.$mp.query);
+
+    
+  },
   computed: {
     count () {
       return store.state.count
@@ -39,6 +50,6 @@ export default {
   margin: 100px auto;
   padding: 5px 10px;
   color: blue;
-  border: 1px solid blue;
+  border: 1rpx solid blue;
 }
 </style>
